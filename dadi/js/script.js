@@ -26,27 +26,35 @@ play.addEventListener('click', function() {
 
     for (let i = 0; i < dice.length; i++) {
 
+        document.querySelector('#player>h1').innerHTML = 'Tu:';
+
         if (playerNumber === i) {
-            document.getElementById('player-number').innerHTML = `Hai lanciato un <br> ${dice[i - 1]}`;
+            document.getElementById('player-number').innerHTML = dice[i - 1];
         } else if (playerNumber === 6) {
-            document.getElementById('player-number').innerHTML = `Hai lanciato un <br> ${dice[5]}`;
+            document.getElementById('player-number').innerHTML = dice[5];
         }
     }
 
     for (let i = 0; i < dice.length; i++) {
+
+        document.querySelector('#bot>h1').innerHTML = 'Il computer:';
+
         if (botNumber === i) {
-            document.getElementById('bot-number').innerHTML = `Il computer ha lanciato un <br> ${dice[i - 1]}`;
+            document.getElementById('bot-number').innerHTML = dice[i - 1];
         } else if (playerNumber === 6) {
-            document.getElementById('bot-number').innerHTML = `Il computer ha lanciato un <br> ${dice[5]}`;
+            document.getElementById('bot-number').innerHTML = dice[5];
         }
     }
 
     if (playerNumber < botNumber) {
         console.log('Hai perso');
+        document.getElementById('result').innerHTML = '<i class="fas fa-sad-cry"></i> Hai perso <i class="fas fa-sad-cry"></i>';
     } else if (playerNumber > botNumber) {
         console.log('Hai vinto');
+        document.getElementById('result').innerHTML = '<i class="fas fa-glass-cheers"></i> Hai vinto!!! <i class="fas fa-glass-cheers"></i>';
     } else {
         console.log('Siete pari');
+        document.getElementById('result').innerHTML = '<i class="fas fa-shoe-prints"></i> Siete pari <i class="fas fa-shoe-prints"></i>';
     }
 });
 
