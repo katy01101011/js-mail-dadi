@@ -41,7 +41,7 @@ play.addEventListener('click', function() {
 
         if (botNumber === i) {
             document.getElementById('bot-number').innerHTML = dice[i - 1];
-        } else if (playerNumber === 6) {
+        } else if (botNumber === 6) {
             document.getElementById('bot-number').innerHTML = dice[5];
         }
     }
