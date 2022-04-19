@@ -26,9 +26,6 @@ play.addEventListener('click', function() {
         } else if (playerNumber === i+1) {
             document.getElementById('player-number').innerHTML = dice[dice.length - 1];
         }
-    }
-
-    for (let i = 0; i < dice.length; i++) {
 
         document.querySelector('#bot>h1').innerHTML = 'Il computer:';
 
