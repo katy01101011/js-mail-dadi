@@ -1,6 +1,3 @@
-// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-
-
 const dice = [
     '<i class="fas fa-dice-one"></i>',
     '<i class="fas fa-dice-two"></i>',
@@ -10,11 +7,7 @@ const dice = [
     '<i class="fas fa-dice-six"></i>'
 ]
 
-// document.querySelector('h1').innerHTML = '<i class="fas fa-dice-one"></i>';
-
-// Stabilire il vincitore, in base a chi fa il punteggio più alto.
-
-
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 const play = document.querySelector('button');
 console.log(play);
 play.addEventListener('click', function() {
@@ -46,6 +39,7 @@ play.addEventListener('click', function() {
         }
     }
 
+    // Stabilire il vincitore, in base a chi fa il punteggio più alto.
     if (playerNumber < botNumber) {
         console.log('Hai perso');
         document.getElementById('result').innerHTML = '<i class="fas fa-sad-cry"></i> Hai perso <i class="fas fa-sad-cry"></i>';
@@ -57,4 +51,3 @@ play.addEventListener('click', function() {
         document.getElementById('result').innerHTML = '<i class="fas fa-shoe-prints"></i> Siete pari <i class="fas fa-shoe-prints"></i>';
     }
 });
-
