@@ -23,8 +23,8 @@ play.addEventListener('click', function() {
 
         if (playerNumber === i) {
             document.getElementById('player-number').innerHTML = dice[i - 1];
-        } else if (playerNumber === 6) {
-            document.getElementById('player-number').innerHTML = dice[5];
+        } else if (playerNumber === i+1) {
+            document.getElementById('player-number').innerHTML = dice[dice.length - 1];
         }
     }
 
@@ -34,8 +34,8 @@ play.addEventListener('click', function() {
 
         if (botNumber === i) {
             document.getElementById('bot-number').innerHTML = dice[i - 1];
-        } else if (botNumber === 6) {
-            document.getElementById('bot-number').innerHTML = dice[5];
+        } else if (botNumber === i+1) {
+            document.getElementById('bot-number').innerHTML = dice[dice.length - 1];
         }
     }
 
